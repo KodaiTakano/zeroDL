@@ -1,0 +1,2 @@
+dataset/*
+!/dataset/mnist.py
