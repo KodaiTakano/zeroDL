@@ -1,6 +1,3 @@
-from turtle import forward
-
-
 class MulLayer:
     def __init__(self):
         self.x = None
@@ -22,7 +19,7 @@ class AddLayer:
         pass
     
     def forward(self, x, y):
-        out = x, y 
+        out = x + y 
         return out
     
     def backward(self, dout):
