@@ -1,5 +1,5 @@
 import numpy as np
-from functions import softmax, cross_entropy_error
+from common.functions import *
 
 # maskという変数は、True,FalseからなるNumpy行列で、xの要素で0以下の場所をTrue、それ以外をFalseとして保持する
 class Relu:
@@ -47,7 +47,7 @@ class Affine:
     
     def backward(self, dout):
         dx = np.dot(dout, self.W.T)
-        self.dW = np.dot(self.X.T, dout)
+        self.dW = np.dot(self.x.T, dout)
         self.db = np.sum(dout, axis=0)
         return dx
 
